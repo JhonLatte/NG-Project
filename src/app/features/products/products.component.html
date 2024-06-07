@@ -1,0 +1,23 @@
+<section class="container">
+  <section class="paginator">
+    <mat-paginator
+      aria-label="Select page"
+      [length]="paginatorConfig.length"
+      [pageSize]="paginatorConfig.limit"
+      [showFirstLastButtons]="true"
+      (page)="loadProducts($event.pageIndex + 1, 5)"
+    >
+    </mat-paginator>
+  </section>
+  @if (products$ | async; as products) {
+    <section class="products">
+      @for (product of products; track product._id) {
+        <app-product-preview
+          [product]="product"
+          (addToCart)="addToCart($event)"
+        ></app-product-preview>
+      }
+    </section>
+  }
+</section>
+<app-footer></app-footer>

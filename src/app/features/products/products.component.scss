@@ -1,0 +1,29 @@
+section {
+  &.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    place-items: center;
+
+    section {
+      &.paginator {
+        width: fit-content;
+      }
+
+      &.products {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: 768px) {
+          gap: 2rem;
+        }
+      }
+    }
+  }
+}

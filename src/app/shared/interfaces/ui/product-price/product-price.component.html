@@ -1,0 +1,27 @@
+@if (productPrice) {
+  <div
+    class="price-wrapper"
+    [ngStyle]="{
+      'justify-content': center ? 'center' : 'flex-start'
+    }"
+  >
+    @if (productPrice.discountPercentage !== 0) {
+      <span
+        style="text-decoration: line-through; color: red; font-weight: bold"
+      >
+        {{ productPrice.beforeDiscount }}
+      </span>
+      <mat-icon>arrow_right_alt</mat-icon>
+    }
+    <span
+      style="font-weight: bold"
+      [ngStyle]="{
+        color: productPrice.discountPercentage === 0 ? 'black' : 'green'
+      }"
+    >
+      {{ productPrice.current }} {{ productPrice.currency }}
+    </span>
+  </div>
+} @else {
+  {{ "nothing_to_display" | translate }}
+}

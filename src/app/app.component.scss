@@ -1,0 +1,131 @@
+* {
+  font-family: "Nunito", sans-serif;
+}
+
+.sidenav-container {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  .log_in {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: white;
+  }
+
+  .logout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 18px;
+
+    .fa-arrow-right-from-bracket {
+      background-color: white;
+      color: black;
+      border-radius: 50%;
+      padding: 8px;
+    }
+  }
+
+  .nav_img {
+    width: 50px;
+    padding-right: 14px;
+  }
+
+  .arcade_txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+
+  .sidenav {
+    width: 200px;
+    // background-color: black;
+  }
+
+  .filler {
+    flex-grow: 1;
+  }
+
+  .title {
+    font-size: 20px;
+    letter-spacing: 0px;
+  }
+
+  fa-cat {
+    font-size: 15px;
+  }
+
+  .nav-buttons {
+    font-size: 15px;
+    color: #ffffff;
+
+    &:hover {
+      color: rgba(136, 88, 237, 1);
+      transition: 0.5s ease;
+    }
+  }
+
+  .nav-mat-lis {
+    padding: 200px;
+  }
+
+  .mat-toolbar.mat-primary {
+    height: 110px;
+    // padding: 0px 120px;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-image: url("../assets/images/navigator_img/nav_backgrounde.jpg");
+  }
+
+  main {
+    margin: auto;
+    width: 100%;
+  }
+
+  .fa-user {
+    color: black;
+    background-color: white;
+    padding: 6px;
+    margin-right: 10px;
+    font-size: 15px;
+    border-radius: 50%;
+  }
+
+  .cartshop {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .mat-toolbar.mat-primary {
+    padding: 0px 20px 0px 0px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .mat-toolbar.mat-primary {
+    padding: 0px 110px;
+  }
+}

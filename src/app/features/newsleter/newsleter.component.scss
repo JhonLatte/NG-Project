@@ -1,0 +1,140 @@
+.newsletermain {
+  background-image: url("../../../assets/images/main_img/newsletter.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  .newsleter {
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    height: 500px;
+    font-family: "Nunito", sans-serif;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      font-weight: 900;
+      font-size: 40px;
+      font-family: "Nunito", sans-serif;
+
+      @media screen and (max-width: 300px){
+        font-size: 30px;
+      }
+    }
+
+    p {
+      font-size: 15px;
+
+      @media screen and (max-width: 300px){
+        font-size: 10px;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      .email {
+        background-color: transparent;
+        color: white;
+        width: 350px;
+        resize: none;
+        height: 30px;
+        border: solid 2.5px white;
+        border-radius: 10px 10px 0px 0px;
+        border-bottom: 1px solid;
+        text-align: center;
+        font-size: 20px;
+
+        @media screen and (max-width: 380px){
+          width: 200px;
+        }
+      }
+
+      .submit {
+        background-color: white;
+        border: none;
+        border-radius: 0px 0px 10px 10px;
+        border-top: 1px solid;
+        height: 35px;
+        font-weight: bold;
+        font-size: 13px;
+
+        &:hover {
+          border: 2.5px solid white;
+          background-color: rgba(136, 88, 237, 1);
+          cursor: pointer;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.disks {
+  background-image: url("../../../assets/images/main_img/gamedisksbackground.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  height: 350px;
+  position: relative;
+
+  @media screen and (max-width: 500px){
+    height: 250px;
+  }
+
+  section {
+    display: flex;
+
+    article {
+      display: flex;
+      bottom: 200px;
+
+      img {
+        bottom: 200px;
+        left: 300px;
+        position: absolute;
+        width: 800px;
+
+        @media screen and (max-width: 1122px){
+          left: 150px;
+        }
+
+        @media screen and (max-width: 945px){
+          left: 50px;
+        }
+
+        @media screen and (max-width: 838px){
+          width: 500px;
+          left: 20px;
+          bottom: 280px;
+        }
+
+        @media screen and (max-width: 520px){
+          width: 350px;
+        }
+
+        @media screen and (max-width: 500px){
+          bottom: 190px;
+        }
+
+        @media screen and (max-width: 370px){
+          width: 280px;
+          left: 0px;
+          // bottom: 300px;
+        }
+      }
+    }
+  }
+}

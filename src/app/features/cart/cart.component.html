@@ -1,0 +1,49 @@
+<section class="container">
+    <mat-toolbar color="primary">
+      <h3>Cart</h3>
+      <button mat-icon-button (click)="close()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-toolbar>
+    @if (cart$ | async; as cart) {
+      <h3>Total: {{ cart | cartSum }}</h3>
+      <button mat-raised-button color="primary" (click)="checkout()">
+        Checkout
+      </button>
+    }
+    @if (product) {
+      <app-product-preview [product]="product" [isCartDisplay]="true">
+        <app-product-counter
+          [product]="product"
+          (deleted)="product = null"
+        ></app-product-counter>
+      </app-product-preview>
+    }
+    @if (cart$ | async; as cart) {
+      <div class="products" [class.full-size]="!product">
+        @for (product of cart.products; track product.productId) {
+          <app-product-preview
+            [product]="product.productId | product | async"
+            [isCartDisplay]="true"
+          >
+            <p class="text-center">
+              Quantity: {{ product.quantity }} | Total:
+              {{ product.quantity * product.pricePerQuantity }}
+            </p>
+            <div class="center">
+              <button
+                mat-raised-button
+                color="warn"
+                (click)="removeFromCart(product)"
+              >
+                Remove
+              </button>
+            </div>
+          </app-product-preview>
+        } @empty {
+          <p>Cart is empty</p>
+        }
+      </div>
+    }
+  </section>
+  

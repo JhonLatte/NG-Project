@@ -1,0 +1,131 @@
+.sales {
+  width: 100%;
+  height: 1000px;
+  display: flex;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  // position: relative;
+  color: white;
+
+  @media screen and (max-width: 690px) {
+    flex-direction: column;
+  }
+
+
+  .sale-but {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgba(136, 88, 237, 1);
+    border-radius: 30px;
+
+    @media screen and (max-width: 690px) {
+      flex-direction: column;
+    }
+
+    .head {
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .percent {
+      font-family: "Radio Canada Big", sans-serif;
+      font-size: clamp(30px, 5vw, 100px);
+      color: white;
+      font-weight: bold;
+      margin-top: 10px;
+      line-height: 0.8;
+    }
+
+    p {
+      font-family: "Radio Canada Big", sans-serif;
+
+      font-size: clamp(16px, 3.5vw, 30px);
+      font-weight: bold;
+    }
+
+    button {
+      border: 2px solid white;
+      transition: 0.5s ease;
+      color: rgba(136, 88, 237, 1);
+      background-color: white;
+      // padding: 10px 20px;
+      border-top-left-radius: 20% 50%;
+      border-top-right-radius: 20% 50%;
+      border-bottom-right-radius: 20% 50%;
+      border-bottom-left-radius: 20% 50%;
+      font-weight: 800;
+
+      &:hover {
+        cursor: pointer;
+        background-color: rgba(136, 88, 237, 1);
+        color: white;
+      }
+    }
+
+  }
+
+  article {
+    img {
+      border-radius: 30px;
+      width: 350px;
+      object-fit: cover;
+
+      @media screen and (max-width: 1070px) {
+        width: 300px;
+      }
+
+      @media screen and (max-width: 926px) {
+        width: 270px;
+      }
+
+      @media screen and (max-width: 832px) {
+        width: 220px;
+      }
+    }
+  }
+
+
+  //..................... media screen .......................
+
+  @media screen and (max-width: 959px) {
+    .sale-but {
+      width: 300px;
+      height: 200px;
+      border-radius: 15px;
+
+      button {
+        padding: 5px 10px;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 960px) {
+    .sale-but {
+      width: 450px;
+      height: 260px;
+
+      button {
+        padding: 10px 20px;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .sale-but {
+      width: 270px;
+      height: 170px;
+      border-radius: 15px;
+
+      button {
+        padding: 5px 10px;
+        margin-top: 5px;
+      }
+    }
+  }
+}

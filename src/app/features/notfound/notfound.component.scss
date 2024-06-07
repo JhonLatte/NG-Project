@@ -1,0 +1,15 @@
+section{
+    width: 100%;
+    min-height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   flex-direction: column;
+
+h1{
+  font-family: "Nunito", sans-serif;
+    font-size: 50px;
+font-style: italic;
+}
+
+}

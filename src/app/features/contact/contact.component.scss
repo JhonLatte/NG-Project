@@ -1,0 +1,265 @@
+main {
+  background-color: black;
+  padding: 50px;
+
+  h1 {
+    font-family: "Nunito", sans-serif;
+    padding-bottom: 10px;
+    font-size: clamp(20px, 8vw, 55px);
+    color: white;
+    font-weight: 800;
+      @media screen and (max-width: 960px){
+        text-align: center;
+      }
+  }
+
+  // ........................................  Contact us .........................................
+
+  .need-hand {
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: column;
+    font-size: clamp(12px, 8vw, 15px);
+  
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+
+    @media screen and (max-width: 960px) {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     text-align: center;
+    }
+
+    .contact-us {
+      display: flex;
+      flex-direction: column;
+
+      .contactus-txt {
+        font-size: 20px;
+        margin-bottom: 50px;
+
+        @media screen and (max-width: 540px){
+          font-size: 18px;
+        }
+      }
+
+      span {
+        color: white;
+        padding: 10px 0px;
+
+        @media screen and (max-width: 540px){
+          font-size: 12px;
+        }
+
+        a {
+          color: white;
+          text-decoration: none;
+        }
+      }
+
+      iframe {
+        width: 400px;
+        height: 250px;
+
+        @media screen and (max-width: 540px){
+          width: 300px ;
+          height: 150px;
+        }
+        @media screen and (max-width: 336px){
+          width: 250px;
+          height: 130px;
+        }
+      }
+    }
+
+    .contactus-inputs {
+      display: flex;
+      flex-direction: column;
+      font-size: 18px;
+      color: white;
+
+      div {
+        display: flex;
+        margin: 0px;
+
+        .inp {
+          display: flex;
+          flex-direction: column;
+
+          label {
+            display: inline-block;
+            margin-bottom: 5px;
+            padding: 10px;
+
+            @media screen and (max-width: 360px){
+              font-size: 14px;
+            }
+          }
+
+          .name {
+            border-radius: 15px 0px 0px 0px;
+            border-right: 1px solid rgba(136, 88, 237, 1);
+
+            &:hover {
+              border-right: 1px solid white;
+              background-color: rgba(136, 88, 237, 1);
+            }
+          }
+
+          .lastname {
+            border-radius: 0px 15px 0px 0px;
+            border-left: 1px solid rgba(136, 88, 237, 1);
+
+            &:hover {
+              border-left: 1px solid white;
+              background-color: rgba(136, 88, 237, 1);
+            }
+          }
+
+          .email {
+            border-right: 1px solid rgba(136, 88, 237, 1);
+
+            &:hover {
+              border-right: 1px solid white;
+              background-color: rgba(136, 88, 237, 1);
+            }
+          }
+
+          .phone {
+            border-left: 1px solid rgba(136, 88, 237, 1);
+
+            &:hover {
+              border-left: 1px solid white;
+              background-color: rgba(136, 88, 237, 1);
+            }
+          }
+        }
+
+        input {
+          width: 200px;
+          height: 35px;
+          margin: 0px;
+          border: solid 2px rgba(136, 88, 237, 1);
+          background-color: black;
+          transition: 0.2s ease;
+          color: white;
+
+          &:hover {
+            border: solid 2px white;
+            background-color: rgba(136, 88, 237, 1);
+          }
+
+          @media screen and (max-width: 540px){
+            width: 150px ;
+          }
+          @media screen and (max-width: 336px){
+            width: 120px ;
+          }
+        }
+
+        textarea {
+          width: 408px;
+          height: 150px;
+          resize: none;
+          overflow: auto;
+          border-bottom: none;
+          background-color: black;
+          border: solid 2px rgba(136, 88, 237, 1);
+          transition: 0.2s ease;
+          color: white;
+
+          &:hover {
+            border: solid 2px white;
+            background-color: rgba(136, 88, 237, 1);
+          }
+          @media screen and (max-width: 540px){
+            width: 302px ;
+          }
+          @media screen and (max-width: 336px){
+            width: 250px ;
+          }
+        }
+
+        .submit {
+          width: 416px;
+          border: none;
+          background-color: rgba(136, 88, 237, 1);
+          transition: 0.2s ease;
+          border-radius: 0px 0px 15px 15px;
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          @media screen and (max-width: 540px){
+            width: 310px ;
+          }
+          @media screen and (max-width: 336px){
+            width: 258px ;
+          }
+        }
+      }
+    }
+  }
+}
+
+//...........................................   Requently .........................................
+
+.requently-main {
+  background-image: url("../../../assets/images/main_img/FAQs_img.webp");
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+
+  h2 {
+    font-family: "Nunito", sans-serif;
+
+    font-size: 42px;
+    margin: 45px 0px;
+  }
+
+  mat-panel-title {
+    color: white;
+    font-size: 14px;
+  }
+
+  mat-expansion-panel {
+    color: white;
+    background: transparent;
+    border: none;
+
+    p {
+      display: flex;
+      font-size: 12px;
+    }
+
+    article {
+      display: flex;
+      flex-direction: column;
+      white-space: 1px;
+    }
+
+    .icons {
+      display: flex;
+      flex-direction: row;
+      padding: 10px;
+      gap: 20px;
+      i {
+        color: white;
+        transition: 0.5s ease;
+
+        &:hover {
+          color: rgba(255, 255, 255, 0.416);
+        }
+      }
+    }
+  }
+}

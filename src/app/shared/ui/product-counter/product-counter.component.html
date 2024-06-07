@@ -1,0 +1,27 @@
+@if (product) {
+  @if (cart$ | async; as cart) {
+    @if (cart.products | cartProduct: product._id; as cartItem) {
+      <section class="counter">
+        <button
+          mat-icon-button
+          color="warn"
+          [disabled]="isDisabled"
+          (click)="counter(cartItem.quantity - 1)"
+        >
+          -
+        </button>
+        <span>{{ cartItem.quantity }}</span>
+        <button
+          mat-icon-button
+          color="primary"
+          [disabled]="isDisabled"
+          (click)="counter(cartItem.quantity + 1)"
+        >
+          +
+        </button>
+      </section>
+    }
+  }
+} @else {
+  {{ "nothing_to_display" | translate }}
+}

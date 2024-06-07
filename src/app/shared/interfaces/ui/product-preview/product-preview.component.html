@@ -1,0 +1,46 @@
+@if (product) {
+  <mat-card class="product">
+    <mat-card-header>
+      <mat-card-title [class.center]="isCartDisplay">
+        {{ product.title }}
+      </mat-card-title>
+      <mat-card-subtitle [class.center]="isCartDisplay">
+        {{ product.category.name }} / {{ product.brand }}
+      </mat-card-subtitle>
+    </mat-card-header>
+    <img
+      mat-card-image
+      alt="Photo of {{ product.title }}"
+      [class.cart-view]="isCartDisplay"
+      [src]="product.thumbnail"
+    />
+    <mat-card-content>
+      @if (!isCartDisplay) {
+        <p>
+          {{ product.description | textShorter }}
+        </p>
+      }
+      <app-product-price
+        [productPrice]="product.price"
+        [center]="isCartDisplay"
+      ></app-product-price>
+      @if (isCartDisplay) {
+        <div class="counter">
+          <ng-content></ng-content>
+        </div>
+      }
+    </mat-card-content>
+    @if (!isCartDisplay) {
+      <mat-card-actions>
+        <button mat-button color="primary">
+          View <mat-icon>remove_red_eye</mat-icon>
+        </button>
+        <button mat-button color="warn" (click)="openCart(product)">
+          Add to cart <mat-icon>shopping_cart</mat-icon>
+        </button>
+      </mat-card-actions>
+    }
+  </mat-card>
+} @else {
+  {{ "nothing_to_display" | translate }}
+}

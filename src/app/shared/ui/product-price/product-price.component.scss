@@ -1,0 +1,10 @@
+.price-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+
+  span {
+    font-size: 20px;
+  }
+}

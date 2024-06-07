@@ -1,0 +1,261 @@
+<main>
+  <h1>NEED A HAND?</h1>
+  <section class="need-hand">
+    <article class="contact-us">
+      <span class="contactus-txt">Contact Us</span>
+      <span><a href="mailto:info@mysite.com">host&#64;gmil.com</a></span>
+      <span>123-456-7890</span>
+      <span>500 Terry Francine Street San Francisco, CA 94158</span>
+      <div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2977.8951518157114!2d44.73768647578308!3d41.7227812712593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404473f1e984eb5b%3A0xc9bc4f7477b26c2e!2sIT%20Academy%20STEP%20Georgia!5e0!3m2!1sru!2sge!4v1702143959891!5m2!1sru!2sge"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </article>
+    <article class="contactus-inputs">
+      <form action="https://api.everrest.educata.dev/echo/html" method="post">
+        <div>
+          <div class="inp">
+            <label for="username">First Name</label>
+            <input class="name" type="text" id="username" name="username" />
+          </div>
+          <div class="inp">
+            <label for="lastname">Last Name</label>
+            <input class="lastname" type="text" id="lastname" required />
+          </div>
+        </div>
+        <div>
+          <div class="inp">
+            <label for="email">Email</label>
+            <input
+              name="email"
+              id="input_comp-kvqdnajq1"
+              class="KvoMHf has-custom-focus wixui-text-input__input"
+              type="email"
+              placeholder=""
+              required=""
+              aria-required="true"
+              pattern="^.+@.+\.[a-zA-Z]{2,63}$"
+              maxlength="250"
+              autocomplete="off"
+              value="qwdqwd"
+              aria-invalid="true"
+            />
+          </div>
+
+          <div class="inp">
+            <label for="phone">Phone</label>
+            <input
+              class="phone"
+              type="number"
+              id="phone"
+              name="phone"
+              required
+            />
+          </div>
+        </div>
+        <div>
+          <div class="inp">
+            <label for="text">Leave us a message</label>
+            <textarea class="comment" id="text" name="text" required></textarea>
+            <input class="submit" type="submit" />
+          </div>
+        </div>
+      </form>
+    </article>
+  </section>
+</main>
+
+<main class="requently-main">
+  <section class="requently">
+    <h2>Frequently Asked Question</h2>
+    <span>Frequently asked questions</span>
+    <mat-tab-group style="margin: 5vh 0px">
+      <mat-tab label="General">
+        <mat-accordion>
+          <mat-expansion-panel
+            (opened)="panelOpenState = true"
+            (closed)="panelOpenState = false"
+          >
+            <mat-expansion-panel-header>
+              <mat-panel-title> What is an FAQ section? </mat-panel-title>
+              <mat-panel-description> </mat-panel-description>
+            </mat-expansion-panel-header>
+            <article>
+              <p>
+                An FAQ section can be used to quickly answer common questions
+                about your business like "Where do you <br />
+                ship to?", "What are your opening hours?", or "How can I book a
+                service?".
+              </p>
+            </article>
+            <article class="icons">
+              <a target="_blank" href="https://www.facebook.com/"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a target="_blank" href="https://x.com/"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a target="_blank" href="https://www.linkedin.com/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </article>
+          </mat-expansion-panel>
+          <mat-expansion-panel
+            (opened)="panelOpenState = true"
+            (closed)="panelOpenState = false"
+          >
+            <mat-expansion-panel-header>
+              <mat-panel-title> Why do FAQs matter? </mat-panel-title>
+              <mat-panel-description> </mat-panel-description>
+            </mat-expansion-panel-header>
+            <article>
+              <p>
+                FAQs are a great way to help site visitors find quick answers to
+                common questions about your business and create a better
+                navigation experience.
+              </p>
+            </article>
+            <article class="icons">
+              <a target="_blank" href="https://www.facebook.com/"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a target="_blank" href="https://x.com/"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a target="_blank" href="https://www.linkedin.com/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </article>
+          </mat-expansion-panel>
+          <mat-expansion-panel
+            (opened)="panelOpenState = true"
+            (closed)="panelOpenState = false"
+          >
+            <mat-expansion-panel-header>
+              <mat-panel-title> Where can I add my FAQs? </mat-panel-title>
+              <mat-panel-description> </mat-panel-description>
+            </mat-expansion-panel-header>
+            <article>
+              <p>
+                FAQs can be added to any page on your site or to your Wix mobile
+                app, giving access to members on the go.
+              </p>
+            </article>
+            <article class="icons">
+              <a target="_blank" href="https://www.facebook.com/"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a target="_blank" href="https://x.com/"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a target="_blank" href="https://www.linkedin.com/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </article>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-tab>
+      <mat-tab label="Setting up FAQs">
+        <mat-accordion>
+          <mat-expansion-panel
+            (opened)="panelOpenState = true"
+            (closed)="panelOpenState = false"
+          >
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                How do I add a new question & answer?
+              </mat-panel-title>
+              <mat-panel-description> </mat-panel-description>
+            </mat-expansion-panel-header>
+            <article>
+              <p>To add a new FAQ follow these steps:</p>
+              <p>1. Manage FAQs from your site dashboard or in the Editor</p>
+              <p>2. Add a new question & answer</p>
+              <p>3. Assign your FAQ to a category</p>
+              <p>4. Save and publish.</p>
+              <p>You can always come back and edit your FAQs.</p>
+            </article>
+            <article class="icons">
+              <a target="_blank" href="https://www.facebook.com/"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a target="_blank" href="https://x.com/"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a target="_blank" href="https://www.linkedin.com/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </article>
+          </mat-expansion-panel>
+          <mat-expansion-panel
+            (opened)="panelOpenState = true"
+            (closed)="panelOpenState = false"
+          >
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Can I insert an image, video, or GIF in my FAQ?
+              </mat-panel-title>
+              <mat-panel-description> </mat-panel-description>
+            </mat-expansion-panel-header>
+            <article>
+              <p>Yes. To add media follow these steps:</p>
+              <p>1. Manage FAQs from your site dashboard or in the Editor</p>
+              <p>2. Create a new FAQ or edit an existing one</p>
+              <p>
+                3. From the answer text box click on the video, image or GIF
+                icon
+              </p>
+              <p>4. Add media from your library and save.</p>
+            </article>
+            <article class="icons">
+              <a target="_blank" href="https://www.facebook.com/"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a target="_blank" href="https://x.com/"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a target="_blank" href="https://www.linkedin.com/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </article>
+          </mat-expansion-panel>
+          <mat-expansion-panel
+            (opened)="panelOpenState = true"
+            (closed)="panelOpenState = false"
+          >
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                How do I edit or remove the 'Frequently Asked Questions' title?
+              </mat-panel-title>
+              <mat-panel-description> </mat-panel-description>
+            </mat-expansion-panel-header>
+            <article>
+              <p>
+                You can edit the title from the FAQ 'Settings' tab in the
+                Editor. To remove the title from your mobile app go to the 'Site
+                & App' tab in your Owner's app and customize.
+              </p>
+            </article>
+            <article class="icons">
+              <a target="_blank" href="https://www.facebook.com/"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a target="_blank" href="https://x.com/"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a target="_blank" href="https://www.linkedin.com/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </article>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-tab>
+    </mat-tab-group>
+  </section>
+</main>
+<app-footer></app-footer>

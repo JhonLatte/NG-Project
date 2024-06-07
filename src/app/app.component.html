@@ -1,0 +1,84 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'">
+    <mat-toolbar color="primary" style="padding-left: 20px">
+      @if (navigation$ | async; as navigations) { @for (navigation of
+      navigations; track navigation) { @if (navigation.title === "Log In") {
+      <a class="nav-buttons" mat-button [routerLink]="navigation.path" (click)="drawer.close()">
+        <div>
+          <i class="nav-list-sign fa-solid fa-user"></i><span>Sign In</span>
+        </div>
+      </a>
+      } } } @if (user$ | async) {
+      <a mat-button routerLink="/" (click)="logOut()" (click)="drawer.close()">
+        <div class="logout">
+          <i class="nav-list-out fa-solid fa-arrow-right-from-bracket fa-flip-horizontal"></i><span>Log out</span>
+        </div>
+      </a>
+      }
+    </mat-toolbar>
+
+    <mat-nav-list >
+      @if (navigation$ | async; as navigations) { @for (navigation of
+      navigations; track navigation) { @if (navigation.title !== "Shops" &&
+      navigation.title !== "Log In") {
+      <a mat-list-item [routerLink]="navigation.path" (click)="drawer.close()" >
+         {{ navigation.title}}
+      </a>
+      } } }
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      @if (isHandset$ | async) {
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"></button>
+      }
+      <a class="title" mat-button routerLink="/">
+        <div class="arcade_txt">
+          <img class="nav_img" src="../../../assets/images/navigator_img/arcade.png" alt="" />{{ title }}
+        </div>
+      </a>
+      <mat-menu #menuHeader="matMenu">
+        @for (lang of langauges; track lang.language) {
+        <button mat-menu-item (click)="loadLanguage(lang.language)">
+          <div class="language">
+            <img [src]="lang.image" alt="{{ lang.title }}" />
+            <span> {{ lang.title }}</span>
+          </div>
+        </button>
+        }
+      </mat-menu>
+
+      <span class="filler"></span>
+      @if (!(isHandset$ | async)) { @if (navigation$ | async; as navigations) {
+      @for (navigation of navigations; track navigation) { @if (navigation.title
+      === "Log In") {
+      <a class="nav-buttons" mat-button [routerLink]="navigation.path">
+        <div><i class="fa-solid fa-user"></i><span>Log In</span></div>
+      </a>
+      } @else {
+      <a class="nav-buttons" mat-button [routerLink]="navigation.path">
+        {{ navigation.title }}
+      </a>
+      } } }
+      <button class="cartshop" (click)="openCart()">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </button>
+      @if (user$ | async) {
+      <a mat-button routerLink="/" (click)="logOut()">
+        <div class="logout">
+          <i class="fa-solid fa-arrow-right-from-bracket fa-flip-horizontal"></i><span>Log Out</span>
+        </div>
+      </a>
+      } } @if (isHandset$ | async) {
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">
+          <i class="fa-solid fa-bars"></i>
+        </mat-icon>
+      </button>
+      }
+    </mat-toolbar>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content></mat-sidenav-container>
